@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Borel&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <title>Urbancart | Online Shopping Partner</title>
+</head>
+
+<body>
+
+    <div class="header">
+
+        <div class="logo">
+            <h1>
+                <a href="index.html" style="text-decoration: none; color: white;">
+                    <span style="color: red;">Urb</span><span style="color: #00C853;">anC</span><span
+                        style="color: orange;">art</span>
+                </a>
+            </h1>
+        </div>
+
+        <div class="searchbox">
+            <form name="searchbox" method="get" action="#">
+                <input type="text" class="search-input" name="query" placeholder="search UrbanCart.in"/>
+                <button type="submit" class="search-btn">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+        </div>
+
+        <div class="navbar">
+
+        </div>
+    </div>
+
+    <div class="hero">
+        <div class="container">
+            <h2>Discover Amazing Products at Unbeatable Prices</h2>
+            <p>Your one-stop destination for everything trendy and useful.</p>
+            <a href="#" class="btn">Start Shopping</a>
+        </div>
+    </div>
+
+    <div class="footer" style="color: white; font-family: Arial, Helvetica, sans-serif;">
+        <div class="terms">
+            <a href="#">Conditions of Use & Sale</a>
+            <a href="#">Privacy Notes</a>
+            <a href="#">Internet-Based Ads</a>
+        </div>
+        <p class="copyright">&copy; <span id="year"></span>, UrbanCart. All Rights Reserved</p>
+    </div>
+
+    <script>
+        const year = new Date().getFullYear();
+
+        document.getElementById("year").innerText = year;
+    </script>
+</body>
+
+</html>
