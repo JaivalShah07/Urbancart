@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    background-color: black;
+    padding: 0 20px;
+    height: 75px;
+    color: white;
+}
+
+.logo h1 {
+    font-family: 'Borel', cursive;
+    font-size: 45px;
+    margin: 50px 0px 20px 40px;
+}
+
+.searchbox {
+    margin: 0 50px;
+    display: flex;
+    align-items: center;
+    max-width: 700px;
+    background-color: white;
+    border-radius: 4px;
+    overflow: hidden;
+    height: 40px;
+}
+
+.search-input {
+    border: none;
+    padding: 0 10px;
+    font-size: 14px;
+    width: 550px;
+    height: 40px;
+}
+
+.search-input:focus,
+.search-btn:focus {
+    outline: none;
+    border: none;
+}
+
+.search-btn {
+    background-color: #00C853;
+    border: none;
+    padding: 0 15px;
+    cursor: pointer;
+    font-size: 18px;
+    height: 40px;
+}    
+
+.search-btn:hover {
+    background: linear-gradient(45deg, red, #00C853, orange);
+}
+
+.search-btn i {
+    color: #111;
+    font-size: 16px;
+}
+
+.accounts {
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.accounts p {
+    font-size: 14px;
+}
+
+.accounts a {
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.accounts i {
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+.cart i {
+    font-size: 25px;
+}
