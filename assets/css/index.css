@@ -10,7 +10,6 @@
     display: flex;
     align-items: center;
     background-color: black;
-    padding: 0 20px;
     height: 75px;
     color: white;
 }
@@ -31,6 +30,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 .hero .container {
@@ -65,6 +65,12 @@
     background: linear-gradient(22.5deg, red, #00C853, orange);
 }
 
+.counts {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    border-radius: 10px;
+}
+
 .footer {
     width: 100%;
     height: 195px;
@@ -93,6 +99,6 @@
 
 .copyright {
     font-size: 12px;
-    margin-top: 05px;
+    margin-top: 5px;
     margin-bottom: 25px;
 }
