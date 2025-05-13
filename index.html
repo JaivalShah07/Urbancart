@@ -1,95 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/index.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Borel&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Borel&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
     <title>Urbancart | Online Shopping Partner</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <div class="header">
+      <div class="logo">
+        <h1>
+          <a href="index.html" style="text-decoration: none; color: white">
+            <span style="color: red">Urb</span
+            ><span style="color: #00c853">anC</span
+            ><span style="color: orange">art</span>
+          </a>
+        </h1>
+      </div>
 
-        <div class="logo">
-            <h1>
-                <a href="index.html" style="text-decoration: none; color: white;">
-                    <span style="color: red;">Urb</span><span style="color: #00C853;">anC</span><span
-                        style="color: orange;">art</span>
-                </a>
-            </h1>
-        </div>
-
-        <div class="navbar">
-
-        </div>
+      <div class="navbar"></div>
     </div>
 
     <div class="hero">
-        <div class="container">
-            <h2>Discover Amazing Products at Unbeatable Prices</h2>
-            <p>Your one-stop destination for everything trendy and useful.</p>
-            <a href="shop.html" class="btn">Start Shopping</a>
-        </div>
+      <div class="container">
+        <h2>Discover Amazing Products at Unbeatable Prices</h2>
+        <p>Your one-stop destination for everything trendy and useful.</p>
+        <a href="shop.html" class="btn">Start Shopping</a>
+      </div>
 
-        <div class="counts">
-            <div class="counter" id="count" data-target='1200000' style="font-size: 40px; text-align: center; font-weight: bold;">0</div>
-            <h1 style="font-family: Arial, Helvetica, sans-serif;">Happy Customers</h1>
+      <div class="counts">
+        <div
+          class="counter"
+          id="count"
+          data-target="1200000"
+          style="font-size: 40px; text-align: center; font-weight: bold"
+        >
+          0
         </div>
-
+        <h1 style="font-family: Arial, Helvetica, sans-serif">
+          Happy Customers
+        </h1>
+      </div>
     </div>
 
-    <div class="footer" style="color: white; font-family: Arial, Helvetica, sans-serif;">
-        <div class="terms">
-            <a href="#">Conditions of Use & Sale</a>
-            <a href="#">Privacy Notes</a>
-            <a href="#">Internet-Based Ads</a>
-        </div>
-        <p class="copyright">&copy; <span id="year"></span>, UrbanCart. All Rights Reserved</p>
+    <div
+      class="footer"
+      style="color: white; font-family: Arial, Helvetica, sans-serif"
+    >
+      <div class="terms">
+        <a href="#">Conditions of Use & Sale</a>
+        <a href="#">Privacy Notes</a>
+        <a href="#">Internet-Based Ads</a>
+      </div>
+      <p class="copyright">
+        &copy; <span id="year"></span>, UrbanCart. All Rights Reserved
+      </p>
     </div>
 
     <script>
-        const year = new Date().getFullYear();
+      const year = new Date().getFullYear();
 
-        document.getElementById("year").innerText = year;
+      document.getElementById("year").innerText = year;
 
+      const counter = document.getElementById("count");
+      const target = +counter.getAttribute("data-target");
 
-        const counter = document.getElementById("count");
-        const target = +counter.getAttribute("data-target");
-        
-        function formatNumber(num) {
-            if(num >= 1000000) {
-                return (num / 1000000).toFixed(1) + 'M+';
-            }
-            else if(num >= 1000) {
-                return (num / 1000).toFixed(1) + 'K+';
-            }
-            return num;
-        };
-
-        function animatecounter() {
-            const updateCount = () => {
-                const current = +counter.innerText;
-                const increment = target / 100;
-
-                if(current < target) {
-                    counter.innerText = Math.ceil(current + increment)
-                    setTimeout(updateCount, 10);
-                }
-                else {
-                    counter.innerText = formatNumber(target);
-                }
-            };
-            updateCount();
+      function formatNumber(num) {
+        if (num >= 1000000) {
+          return (num / 1000000).toFixed(1) + "M+";
+        } else if (num >= 1000) {
+          return (num / 1000).toFixed(1) + "K+";
         }
-        
-        animatecounter();
-    </script>
-</body>
+        return num;
+      }
 
+      function animatecounter() {
+        const updateCount = () => {
+          const current = +counter.innerText;
+          const increment = target / 100;
+
+          if (current < target) {
+            counter.innerText = Math.ceil(current + increment);
+            setTimeout(updateCount, 10);
+          } else {
+            counter.innerText = formatNumber(target);
+          }
+        };
+        updateCount();
+      }
+
+      animatecounter();
+    </script>
+  </body>
 </html>

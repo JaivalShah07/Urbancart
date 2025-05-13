@@ -1,109 +1,210 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f4f4f4;
 }
 
 .header {
-    position: sticky;
-    top: 0;
-    z-index: 1;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    background-color: black;
-    height: 75px;
-    color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: black;
+  height: 75px;
+  color: white;
+  justify-content: space-between;
+  padding: 0 20px;
 }
 
 .logo h1 {
-    font-family: 'Borel', cursive;
-    font-size: 45px;
-    margin: 50px 0px 20px 40px;
+  font-family: "Borel", cursive;
+  font-size: 45px;
+  margin: 0;
+}
+
+.logo h1 a {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
 }
 
 .hero {
-    position: relative;
-    width: 100%;
-    height: 80vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/hero-image.png');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../images/hero-image.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
 }
 
 .hero .container {
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-    padding: 40px 20px;
+  color: white;
+  padding: 20px;
 }
 
 .hero .container h2 {
-    font-size: 58px;
-    max-width: 900px;
-    margin: 20px auto;
+  font-size: 58px;
+  max-width: 900px;
+  margin: 20px auto;
 }
 
 .hero .container p {
-    font-size: 22px;
-    max-width: 800px;
-    margin: 0 auto 40px auto;
+  font-size: 22px;
+  max-width: 800px;
+  margin: 0 auto 40px auto;
 }
 
 .btn {
-    padding: 12px 25px;
-    background-color: #00C853;
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    border-radius: 5px;
+  padding: 12px 25px;
+  background-color: #00c853;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 5px;
 }
 
 .btn:hover {
-    background: linear-gradient(22.5deg, red, #00C853, orange);
+  background: linear-gradient(22.5deg, red, #00c853, orange);
 }
 
 .counts {
-    position: absolute;
-    bottom: 30px;
-    right: 20px  ;
-    font-family: 'Rajdhani', sans-serif;
-    color: white;
-    border-radius: 10px;
+  position: absolute;
+  bottom: 30px;
+  right: 20px;
+  font-family: "Rajdhani", sans-serif;
+  color: white;
+  border-radius: 10px;
+}
+
+.counts h1 {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .footer {
-    width: 100%;
-    height: 195px;
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
+  width: 100%;
+  height: 195px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .footer .terms {
-    display: flex;
-    gap: 20px;
-    font-size: 13px;
-    justify-content: center;
+  display: flex;
+  gap: 20px;
+  font-size: 13px;
+  justify-content: center;
 }
 
 .terms a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
 .terms a:hover {
-    text-decoration: underline 1px white;
+  text-decoration: underline 1px white;
 }
 
 .copyright {
-    font-size: 12px;
-    margin-top: 5px;
-    margin-bottom: 25px;
+  font-size: 12px;
+  margin-top: 5px;
+  margin-bottom: 25px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .hero .container h2 {
+    font-size: 48px;
+  }
+
+  .hero .container p {
+    font-size: 20px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+  }
+
+  .counts h1 {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .hero {
+    height: 70vh;
+  }
+
+  .hero .container h2 {
+    font-size: 40px;
+  }
+
+  .hero .container p {
+    font-size: 18px;
+  }
+
+  .btn {
+    padding: 8px 18px;
+  }
+
+  .counts h1 {
+    font-size: 25px;
+  }
+
+  .footer .terms {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .copyright {
+    font-size: 11px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .hero {
+    height: 60vh;
+  }
+
+  .hero .container h2 {
+    font-size: 30px;
+  }
+
+  .hero .container p {
+    font-size: 16px;
+  }
+
+  .btn {
+    padding: 8px 15px;
+  }
+
+  .counts h1 {
+    font-size: 20px;
+  }
+
+  .footer .terms {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .copyright {
+    font-size: 10px;
+  }
 }
